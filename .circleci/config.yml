@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Create Cloudformation Stack
           command: |
-            aws configure import --csv file://raezon_accessKeys.csv
+            aws configure
             aws cloudformation deploy \
               --template-file template.yml \
               --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
